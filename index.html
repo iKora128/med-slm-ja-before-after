@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>med-slm-ja Before / After — 日本医療ガイドライン 新旧比較データセット</title>
+<meta name="description" content="日本の医療ガイドライン約200冊・2010–2024年の改訂をたどり、旧版と新版で答えがどう変わったかを新旧の出典付きで収録した46,705件のデータセット。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#fbfbfc; --surface:#fff; --soft:#f4f4f7; --line:#e9e9ef; --line2:#dcdce3;
+ --ink:#15151a; --ink2:#4e4e59; --ink3:#8e8e9a;
+ --accent:#1f6feb;
+ --rev:#9a5a00; --rev-bg:#fdf2e3; --add:#1d7a44; --add-bg:#e9f6ee;
+ --none:#6e6e78; --none-bg:#eef0f2; --new:#7a3fb0; --new-bg:#f4ecfd;
+ --unrel:#b0392b; --unrel-bg:#fce9e7; --before-bg:#faf8f3; --after-bg:#eef5fe;
+}
+*{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;
+ font-size:17px;line-height:1.9;font-weight:400}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+.col{max-width:780px;margin:0 auto}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+
+nav{position:sticky;top:0;z-index:30;background:rgba(251,251,252,.85);
+ backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+ border-bottom:1px solid var(--line)}
+.nav-in{max-width:1000px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;gap:18px}
+.brand{font-weight:900;letter-spacing:-.01em;color:var(--ink);font-size:15.5px}
+.brand b{color:var(--accent)}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:22px}
+.nav-links a{color:var(--ink2);font-size:14px;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:#fff!important;padding:8px 15px;border-radius:980px;font-weight:700}
+@media(max-width:680px){.nav-links a.hidem{display:none}}
+
+.hero{text-align:center;padding:66px 0 8px}
+.hero h1{font-size:clamp(42px,8vw,78px);line-height:1.04;letter-spacing:-.03em;margin:18px 0 0;font-weight:900}
+.hero .tag{font-size:clamp(18px,2.4vw,22px);color:var(--ink2);margin:20px auto 0;max-width:640px;font-weight:500;line-height:1.7}
+.authors{margin-top:24px}
+.aname{font-size:17px;font-weight:700;color:var(--ink)}
+.aname span{color:var(--ink3);font-weight:500;font-size:14.5px}
+.affil{margin-top:5px;color:var(--ink2);font-size:14.5px;font-weight:500}
+.affil a{font-weight:700}
+.btns{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin:30px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:980px;font-size:15.5px;
+ font-weight:700;border:1px solid var(--line2);background:var(--surface);color:var(--ink);transition:.15s}
+.btn:hover{border-color:var(--ink3);transform:translateY(-1px)}
+.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.primary:hover{opacity:.9}
+.btn svg{width:17px;height:17px}
+.stat-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 34px;margin:36px auto 0;
+ padding-top:28px;border-top:1px solid var(--line);max-width:740px}
+.stat{text-align:center}
+.stat .v{font-size:27px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13px;color:var(--ink3);font-weight:500;margin-top:3px}
+
+figure{margin:0}
+.hero-fig{margin:46px auto 0;max-width:1000px}
+.hero-fig img{width:100%;display:block;border-radius:18px;border:1px solid var(--line);
+ box-shadow:0 30px 60px -40px rgba(20,20,40,.4)}
+.cap{color:var(--ink3);font-size:13.5px;text-align:center;margin-top:13px}
+
+section{padding:76px 0}
+section.alt{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{text-align:center;margin-bottom:40px}
+.sec-head h2{font-size:clamp(28px,4.6vw,40px);letter-spacing:-.025em;margin:10px 0 0;font-weight:900}
+.sec-head p{color:var(--ink2);margin:15px auto 0;max-width:660px;font-size:16.5px}
+.col p{font-size:17px;line-height:1.95}
+.col p b{font-weight:700}
+.abstract{font-size:19px;line-height:1.95}
+
+.split{display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center}
+@media(max-width:760px){.split{grid-template-columns:1fr;gap:26px}}
+.split p{margin:0 0 14px}
+.num-list{list-style:none;padding:0;margin:20px 0 0}
+.num-list li{position:relative;padding:14px 0 14px 46px;border-top:1px solid var(--line)}
+.num-list li b{display:block;color:var(--ink);font-size:16.5px}
+.num-list li span{color:var(--ink2);font-size:15px}
+.num-list li::before{content:attr(data-n);position:absolute;left:0;top:14px;width:32px;height:32px;
+ border-radius:50%;background:var(--soft);color:var(--accent);font-weight:900;display:flex;
+ align-items:center;justify-content:center;font-size:15px}
+.split img{width:100%;border-radius:16px;border:1px solid var(--line)}
+
+.callout{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:6px 0 4px}
+.cstat{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--line);border-radius:16px;
+ padding:20px 22px;text-align:center}
+.cstat .v{font-size:30px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.cstat .l{color:var(--ink2);font-size:14px;margin-top:4px;font-weight:500}
+.cstat .s{color:var(--ink3);font-size:12px;margin-top:2px}
+
+.tbl{width:100%;border-collapse:collapse;font-size:15.5px;margin-top:8px}
+.tbl th{text-align:left;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);
+ font-weight:700;padding:0 12px 11px;border-bottom:1px solid var(--line2)}
+.tbl td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.tt{font-weight:700;padding:3px 11px;border-radius:980px;font-size:13px;white-space:nowrap}
+.tt-revision{background:var(--rev-bg);color:var(--rev)}.tt-addition{background:var(--add-bg);color:var(--add)}
+.tt-none{background:var(--none-bg);color:var(--none)}.tt-new{background:var(--new-bg);color:var(--new)}
+.tt-unrelated{background:var(--unrel-bg);color:var(--unrel)}
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 28px;margin-top:22px}
+.chart-card h3{margin:0 0 4px;font-size:17px;font-weight:700}
+.chart-card .sub{color:var(--ink3);font-size:14px;margin:0 0 18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+
+/* example Q/A cards */
+.excard{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin-bottom:18px}
+.excard .toprow{margin-bottom:14px}
+.qline{display:flex;gap:13px;align-items:flex-start}
+.qbadge{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:var(--ink);color:#fff;
+ font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.qline .q{font-size:19px;font-weight:700;line-height:1.55;margin:0}
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:16px}
+@media(max-width:660px){.ex{grid-template-columns:1fr}}
+.pane{border:1px solid var(--line);border-radius:13px;padding:15px 17px}
+.pane.before{background:var(--before-bg)}.pane.after{background:var(--after-bg);border-color:#cfe0fb}
+.pane.absent{background:#faf6ff;border:1px dashed #e0cdf2;display:flex;align-items:center;justify-content:center;text-align:center;min-height:88px}
+.pane h4{margin:0 0 9px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.pane.before h4{color:#9c7327}.pane.after h4{color:var(--accent)}.pane.absent .txt{color:var(--new);font-weight:700;font-size:14.5px}
+.pane h4 .a{display:inline-flex;width:19px;height:19px;border-radius:6px;font-size:11.5px;font-weight:800;align-items:center;justify-content:center;color:#fff}
+.pane.before h4 .a{background:#b08332}.pane.after h4 .a{background:var(--accent)}
+.pane p{margin:0;font-size:15.5px;line-height:1.72}
+.pane.before p{color:#6a655c}
+.pane.after p{color:var(--ink);font-weight:600}
+.change{margin-top:16px;background:var(--soft);border-radius:13px;padding:14px 17px;font-size:15.5px;color:#2c2c36;line-height:1.72;font-weight:600}
+.change .lbl{font-weight:800;color:var(--ink);margin-right:11px}
+.src{color:var(--ink3);font-size:13.5px;margin:12px 0 0}
+
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:8px}
+@media(max-width:760px){.pipe{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.pipe{grid-template-columns:1fr}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.step .n{width:30px;height:30px;border-radius:8px;background:var(--ink);color:#fff;font-weight:900;
+ display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:12px}
+.step b{display:block;font-size:15.5px;margin-bottom:6px}
+.step span{color:var(--ink2);font-size:14px;line-height:1.65}
+.step code,.model-note code,.disc code{background:var(--soft);padding:1px 6px;border-radius:5px;font-size:13px}
+.model-note{margin-top:20px;background:var(--soft);border-radius:12px;padding:16px 20px;font-size:14.5px;color:var(--ink2);line-height:1.75}
+.model-note b{color:var(--ink)}
+
+.cite-ask{font-size:16.5px;line-height:1.9;margin:0 0 18px}
+.cite{background:#15151a;color:#e8e8ef;border-radius:16px;padding:22px 24px;overflow-x:auto;
+ font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:13.5px;line-height:1.8;white-space:pre}
+.disc{color:var(--ink2);font-size:14.5px;background:var(--soft);border-radius:14px;padding:18px 22px;margin-top:24px;line-height:1.8}
+.disc b{color:var(--ink)}
+
+footer{border-top:1px solid var(--line);padding:44px 0;color:var(--ink3);font-size:13.5px;text-align:center}
+footer a{color:var(--ink2);font-weight:600}
+footer .links{display:flex;gap:20px;justify-content:center;margin-bottom:16px}
+footer .byline{letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink2);font-size:12.5px}
+</style></head><body>
+
+<nav><div class="nav-in">
+ <span class="brand">med-slm-ja <b>Before/After</b></span>
+ <div class="nav-links">
+  <a class="hidem" href="#premise">背景</a><a class="hidem" href="#types">5分類</a>
+  <a class="hidem" href="#stats">統計</a><a class="hidem" href="#how">作り方</a>
+  <a href="https://huggingface.co/datasets/genshiai-daichi/med-slm-ja-before-after">Hugging Face</a>
+  <a class="nav-cta" href="explore.html">データを見る</a>
+ </div>
+</div></nav>
+
+<header class="hero wrap">
+ <div class="eyebrow">Japanese Clinical Guidelines · Temporal Before/After</div>
+ <h1>医療ガイドラインの<br>新旧比較データセット</h1>
+ <p class="tag">日本の医療ガイドライン約200冊について、旧版と新版で回答が変わった箇所を <b>46,705 件</b> 集めました。各ペアに新旧の出典が付いています。</p>
+ <div class="authors">
+  <div class="aname">長嶋 大地 <span>Daichi Nagashima</span></div>
+  <div class="affil"><a href="https://genshi.ai">GENSHI AI</a> 代表取締役 CEO &nbsp;/&nbsp; 東京大学医学部附属病院 循環器内科</div>
+ </div>
+ <div class="btns">
+  <a class="btn primary" href="explore.html">データを見る
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn" href="https://huggingface.co/datasets/genshiai-daichi/med-slm-ja-before-after">
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 8V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3"/><path d="M2 14h7m0 0-3-3m3 3-3 3"/></svg>
+   Hugging Face</a>
+  <a class="btn" href="#cite">引用</a>
+ </div>
+ <div class="stat-strip">
+  <div class="stat"><div class="v">46,705</div><div class="l">新旧ペア</div></div>
+  <div class="stat"><div class="v">201</div><div class="l">ガイドライン</div></div>
+  <div class="stat"><div class="v">155</div><div class="l">学会・発行主体</div></div>
+  <div class="stat"><div class="v">2010–24</div><div class="l">新版カバー年</div></div>
+ </div>
+ <figure class="hero-fig">
+  <img src="assets/hero.jpg" alt="医療ガイドラインの新旧比較" onerror="this.closest('figure').style.display='none'">
+  <figcaption class="cap">同じ質問で、旧版と新版の回答を突き合わせています。</figcaption>
+ </figure>
+</header>
+
+<section id="premise"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">Premise</div><h2>ガイドラインは数年ごとに改訂されます</h2>
+  <p>改訂のたびに、診断基準や推奨薬が変わります。古い版のままだと、今の標準と違う回答になります。</p></div>
+ <div class="callout">
+  <div class="cstat"><div class="v">387</div><div class="l">改訂を重ねる系列</div><div class="s">タイトル＋発行組織で判定</div></div>
+  <div class="cstat"><div class="v">664</div><div class="l">存在する旧版の数</div><div class="s">収集した全体での実数</div></div>
+  <div class="cstat"><div class="v">最大10</div><div class="l">同一系列の旧版数</div><div class="s">例: CKD は 2007→09→12→24</div></div>
+ </div>
+ <p style="margin-top:30px">日本の医療ガイドラインを集めると、<b>387 系列</b>が改訂を重ねていて、<b>旧版だけで 664 件</b>ありました。改訂はだいたい数年おきです。たとえば CKD 診療ガイドは <b>2007・2009・2012・2024</b> と4回改訂されています。変わったこと自体より、<b>どこがどう変わったかが見えにくい</b>のが問題です。</p>
+ <p>本データセットは、そのうち旧版の本文を取得できた <b>336 系列・旧版 518 本</b> を新版と照合し、変わった箇所を <b>46,705 件</b> のペアにしました。改訂は1回とは限りません。<b>102 系列（30%）は旧版を複数持ち</b>、最も多い系列では10本以上あります。</p>
+ <div class="chart-card"><h3>旧版を持つ系列の「保有旧版数」分布</h3><p class="sub">336 系列のうち、複数の旧版を持つものが 102 系列（最大10本）</p><svg viewBox="0 0 720 196" width="100%" font-family="inherit"><line x1="20" y1="166" x2="706" y2="166" stroke="#eaeaef"/><rect x="57.0" y="24.0" width="63.1" height="142.0" rx="4" fill="#7c8aa6"/><text x="88.6" y="16.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#52525d">234</text><text x="88.6" y="185.0" text-anchor="middle" font-size="12.5" fill="#9a9aa6">1本</text><rect x="194.2" y="127.2" width="63.1" height="38.8" rx="4" fill="#7c8aa6"/><text x="225.8" y="119.2" text-anchor="middle" font-size="12.5" font-weight="700" fill="#52525d">64</text><text x="225.8" y="185.0" text-anchor="middle" font-size="12.5" fill="#9a9aa6">2本</text><rect x="331.4" y="153.9" width="63.1" height="12.1" rx="4" fill="#7c8aa6"/><text x="363.0" y="145.9" text-anchor="middle" font-size="12.5" font-weight="700" fill="#52525d">20</text><text x="363.0" y="185.0" text-anchor="middle" font-size="12.5" fill="#9a9aa6">3本</text><rect x="468.6" y="160.5" width="63.1" height="5.5" rx="4" fill="#7c8aa6"/><text x="500.2" y="152.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#52525d">9</text><text x="500.2" y="185.0" text-anchor="middle" font-size="12.5" fill="#9a9aa6">4本</text><rect x="605.8" y="160.5" width="63.1" height="5.5" rx="4" fill="#7c8aa6"/><text x="637.4" y="152.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#52525d">9</text><text x="637.4" y="185.0" text-anchor="middle" font-size="12.5" fill="#9a9aa6">5本+</text></svg></div>
+ <p style="margin-top:26px">この新旧の差分は、<b>DPO</b>（最新版を選ばせる選好学習）、埋め込みの時間軸学習、医師の継続教育（CME）、モデルが古い知識を答えないかの評価などに使えます。</p>
+</div></section>
+
+<section class="alt"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">Abstract</div><h2>概要</h2></div>
+ <p class="abstract">日本の医療ガイドライン <b>201 冊・155 の発行主体・2010〜2024年</b> を対象に、同じガイドラインの旧版と新版の回答を突き合わせ、<b>46,705 件</b> を新旧の出典付きで収録しました。各ペアは <b>type</b>（revision / addition / none / new / unrelated）で分類しています。DPO、埋め込みの時間軸学習、医師の継続教育、時間整合性の評価などに使えます。</p>
+</div></section>
+
+<section id="why"><div class="wrap">
+ <div class="sec-head"><div class="eyebrow">Motivation</div><h2>なぜ作ったか</h2></div>
+ <div class="split">
+  <div>
+   <p>古いガイドラインのまま診療すると、患者のリスクになります。「数年前の知識で止まっている医師」の見落としは、大きく <b>2種類</b> あります。本データセットは、その両方を <b>type</b> で分けて収録しています。</p>
+   <ul class="num-list">
+    <li data-n="1"><b>答えが変わったもの</b><span>数値目標・診断基準・推奨薬の改訂です。同じ質問でも、旧版と新版で答えが違います。</span></li>
+    <li data-n="2"><b>新しく登場したもの</b><span>旧版には項目すらない新薬・新概念です（例: CKD治療の SGLT2 阻害薬、フィネレノン）。</span></li>
+   </ul>
+  </div>
+  <figure><img src="assets/ba.jpg" alt="before / after" onerror="this.closest('figure').style.display='none'"></figure>
+ </div>
+</div></section>
+
+<section id="types" class="alt"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">Taxonomy</div><h2>5つの type</h2>
+  <p>全ペアを、新旧の差の性質で5つに分けています。捨てるのは判定できなかったものだけです。</p></div>
+ <table class="tbl">
+  <thead><tr><th>type</th><th>意味</th><th>件数</th></tr></thead>
+  <tbody>
+   <tr><td><span class="tt tt-revision">revision</span></td><td>旧版から新版で<b>答えが臨床的に変わった</b>（DPO向き）</td><td class="num">7,042</td></tr>
+   <tr><td><span class="tt tt-addition">addition</span></td><td>新版で<b>情報が追加された</b>（旧版と矛盾しない）</td><td class="num">6,680</td></tr>
+   <tr><td><span class="tt tt-new">new</span></td><td>旧版に<b>ない新登場</b>（新薬・新概念）</td><td class="num">1,430</td></tr>
+   <tr><td><span class="tt tt-unrelated">unrelated</span></td><td>旧版の類似箇所が別の話題（要確認）</td><td class="num">255</td></tr>
+   <tr><td><span class="tt tt-none">none</span></td><td>言い回しだけで中身は同じ</td><td class="num">31,298</td></tr>
+  </tbody>
+ </table>
+ <div class="chart-card"><h3>type の分布</h3><p class="sub">全 46,705 件の内訳</p><svg viewBox="0 0 720 240" width="100%" role="img" font-family="inherit"><text x="116" y="24.0" text-anchor="end" dominant-baseline="central" font-size="14.5" font-weight="700" fill="#16161a">none</text><rect x="128" y="8" width="496" height="32" rx="7" fill="#a6a6b0"/><text x="634" y="24.0" dominant-baseline="central" font-size="14" font-weight="700" fill="#55555f">31,298</text><text x="116" y="72.0" text-anchor="end" dominant-baseline="central" font-size="14.5" font-weight="700" fill="#16161a">revision</text><rect x="128" y="56" width="112" height="32" rx="7" fill="#b06a12"/><text x="250" y="72.0" dominant-baseline="central" font-size="14" font-weight="700" fill="#55555f">7,042</text><text x="116" y="120.0" text-anchor="end" dominant-baseline="central" font-size="14.5" font-weight="700" fill="#16161a">addition</text><rect x="128" y="104" width="106" height="32" rx="7" fill="#1d7a44"/><text x="244" y="120.0" dominant-baseline="central" font-size="14" font-weight="700" fill="#55555f">6,680</text><text x="116" y="168.0" text-anchor="end" dominant-baseline="central" font-size="14.5" font-weight="700" fill="#16161a">new</text><rect x="128" y="152" width="23" height="32" rx="7" fill="#7a3fb0"/><text x="161" y="168.0" dominant-baseline="central" font-size="14" font-weight="700" fill="#55555f">1,430</text><text x="116" y="216.0" text-anchor="end" dominant-baseline="central" font-size="14.5" font-weight="700" fill="#16161a">unrelated</text><rect x="128" y="200" width="4" height="32" rx="7" fill="#b0392b"/><text x="142" y="216.0" dominant-baseline="central" font-size="14" font-weight="700" fill="#55555f">255</text></svg></div>
+</div></section>
+
+<section id="examples"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">Examples</div><h2>実例で見る</h2></div>
+
+ <div class="excard">
+  <div class="toprow"><span class="tt tt-revision">revision</span></div>
+  <div class="qline"><div class="qbadge">Q</div><p class="q">冠攣縮性狭心症を「確定／疑い」とする前提条件は？</p></div>
+  <div class="ex">
+   <div class="pane before"><h4><span class="a">A</span> Before · 旧</h4><p>硝酸薬によりすみやかに消失する狭心症様発作であること。</p></div>
+   <div class="pane after"><h4><span class="a">A</span> After · 新</h4><p>自然発作・非薬物誘発試験・薬物誘発試験（アセチルコリン等）のいずれかで確認する。</p></div>
+  </div>
+  <div class="change"><span class="lbl">変更点</span>診断の前提が、硝酸薬への反応から誘発試験の有無に変わりました。</div>
+  <p class="src">日本循環器学会ほか</p>
+ </div>
+
+ <div class="excard">
+  <div class="toprow"><span class="tt tt-new">new</span></div>
+  <div class="qline"><div class="qbadge">Q</div><p class="q">SGLT2阻害剤の服用時に注意すべき熱中症の誘因は？</p></div>
+  <div class="ex">
+   <figure style="margin:0"><img src="assets/new.jpg" alt="new drug" style="width:100%;border-radius:13px;border:1px solid var(--line)" onerror="this.closest('figure').style.display='none'"></figure>
+   <div class="pane absent"><div class="txt">★ 旧版に項目が存在しない<br>（新登場）</div></div>
+  </div>
+  <div class="change"><span class="lbl">変更点</span>古い知識のままだと気づきにくい部分です。新薬や新概念がここに入ります（例: クリゾチニブ、ベバシズマブ）。埋め込み検索だと旧版に誤ヒットするので、キーワード照合で別に拾っています。</div>
+ </div>
+
+ <div class="excard">
+  <div class="toprow"><span class="tt tt-addition">addition</span></div>
+  <div class="qline"><div class="qbadge">Q</div><p class="q">メトトレキサート（MTX）投与時に併用すべき薬剤と目的は？</p></div>
+  <div class="ex">
+   <div class="pane before"><h4><span class="a">A</span> Before · 旧</h4><p>葉酸製剤を併用し、肝機能障害・消化器症状・口内炎を予防する。</p></div>
+   <div class="pane after"><h4><span class="a">A</span> After · 新</h4><p>葉酸／活性型葉酸（ロイコボリン®）を併用…（活性型葉酸の具体名と推奨用量を追記）。</p></div>
+  </div>
+  <div class="change"><span class="lbl">変更点</span>方針は同じで、活性型葉酸の名前と用量が追加されました。</div>
+ </div>
+</div></section>
+
+<section id="stats" class="alt"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">Statistics</div><h2>データの内訳</h2></div>
+ <div class="chart-card"><h3>新版の年分布</h3><p class="sub">新版側ガイドラインの発行年（2010–2024、ピークは2020年）</p><svg viewBox="0 0 720 236" width="100%" role="img" font-family="inherit"><line x1="20" y1="202" x2="706" y2="202" stroke="#eaeaef"/><rect x="29.1" y="198.8" width="27.4" height="3.2" rx="3" fill="#bcd2f5"/><text x="42.9" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2010</text><rect x="74.9" y="199.6" width="27.4" height="2.4" rx="3" fill="#bcd2f5"/><rect x="120.6" y="177.0" width="27.4" height="25.0" rx="3" fill="#bcd2f5"/><text x="134.3" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2012</text><rect x="166.3" y="149.7" width="27.4" height="52.3" rx="3" fill="#bcd2f5"/><rect x="212.1" y="163.7" width="27.4" height="38.3" rx="3" fill="#bcd2f5"/><text x="225.8" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2014</text><rect x="257.8" y="149.7" width="27.4" height="52.3" rx="3" fill="#bcd2f5"/><rect x="303.5" y="134.0" width="27.4" height="68.0" rx="3" fill="#bcd2f5"/><text x="317.3" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2016</text><rect x="349.3" y="118.8" width="27.4" height="83.2" rx="3" fill="#bcd2f5"/><rect x="395.0" y="115.5" width="27.4" height="86.5" rx="3" fill="#bcd2f5"/><text x="408.7" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2018</text><rect x="440.7" y="145.1" width="27.4" height="56.9" rx="3" fill="#bcd2f5"/><rect x="486.5" y="26.0" width="27.4" height="176.0" rx="3" fill="#1f6feb"/><text x="500.2" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2020</text><rect x="532.2" y="98.3" width="27.4" height="103.7" rx="3" fill="#bcd2f5"/><rect x="577.9" y="162.3" width="27.4" height="39.7" rx="3" fill="#bcd2f5"/><text x="591.7" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2022</text><rect x="623.7" y="153.4" width="27.4" height="48.6" rx="3" fill="#bcd2f5"/><rect x="669.4" y="165.1" width="27.4" height="36.9" rx="3" fill="#bcd2f5"/><text x="683.1" y="220" text-anchor="middle" font-size="11.5" fill="#9a9aa6">2024</text><text x="500.2" y="17" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f6feb">9,417</text></svg></div>
+ <div class="grid2" style="margin-top:18px">
+  <div class="chart-card"><h3>revision の変化の大きさ</h3><p class="sub">改訂 7,042 件の major / minor 内訳</p><svg viewBox="0 0 720 58" width="100%" font-family="inherit"><clipPath id="mgc"><rect x="0" y="6" width="720" height="36" rx="9"/></clipPath><g clip-path="url(#mgc)"><rect x="0" y="6" width="396.3" height="36" fill="#b06a12"/><rect x="396.3" y="6" width="323.7" height="36" fill="#e7c79a"/></g><text x="15" y="24.0" dominant-baseline="central" font-size="13.5" font-weight="700" fill="#fff">major · 3,876</text><text x="409.3" y="24.0" dominant-baseline="central" font-size="13.5" font-weight="700" fill="#7a5526">minor · 3,166</text></svg></div>
+  <div class="chart-card"><h3>主な発行主体（上位6）</h3><p class="sub">155 の学会・委員会をカバー</p>
+   <table class="tbl" style="margin-top:0"><tbody><tr><td>日本循環器学会ほか</td><td class="num">6,555</td></tr><tr><td>日本臨床検査医学会</td><td class="num">3,136</td></tr><tr><td>日本循環器学会, 日本胸部外科学会, 日本小児循環器学会, 日本心臓血管外科学会, 日本心臓病学会</td><td class="num">1,773</td></tr><tr><td>日本緩和医療学会</td><td class="num">1,759</td></tr><tr><td>日本循環器学会, 日本産科婦人科学会, 日本小児循環器学会, 日本心臓血管外科学会, 日本心臓病学会</td><td class="num">1,645</td></tr><tr><td>日本産科婦人科学会</td><td class="num">1,643</td></tr></tbody></table></div>
+ </div>
+</div></section>
+
+<section id="how"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">Method</div><h2>作り方</h2>
+  <p>新版の Q&amp;A を起点に、同じガイドラインの旧版本文と照合します。4ステップです。</p></div>
+ <div class="pipe">
+  <div class="step"><div class="n">1</div><b>旧版を検索</b><span>質問を <code>ruri-v3-310m</code> でベクトル化し、同じガイドラインの旧版 L2 チャンクから上位5件を取り出します。</span></div>
+  <div class="step"><div class="n">2</div><b>旧版回答を生成</b><span>取り出した旧版本文だけを使い、<code>gemma-4-31b</code> で回答します。該当がなければ飛ばします。</span></div>
+  <div class="step"><div class="n">3</div><b>新旧を判定</b><span>新版回答と旧版回答を <code>gemma-4-31b</code> で比べ、revision / addition / none / unrelated に振り分けます。</span></div>
+  <div class="step"><div class="n">4</div><b>新規を抽出</b><span>旧版本文に一度も出てこない新薬・固有名を含む新版 Q&amp;A を、キーワード照合で別に集めます。</span></div>
+ </div>
+ <div class="model-note">生成はすべて <b>google/gemma-4-31b-it</b>、埋め込みは <b>cl-nagoya/ruri-v3-310m</b>（ModernBERT-ja）を使っています。旧版が複数あるガイドライン（約3割）は各旧版と比べ、回答が同じ版はまとめています。</div>
+</div></section>
+
+<section id="cite" class="alt"><div class="wrap col">
+ <div class="sec-head"><div class="eyebrow">License &amp; Citation</div><h2>ライセンスと引用</h2></div>
+ <p class="cite-ask">本データセットは <b>CC BY 4.0</b> で公開しています（商用可・改変可）。CC BY 4.0 では、利用時に<b>出典の明記（著作者・データセット名・ライセンス・変更の有無）が必須</b>です。明記の形式には、下記の引用を使ってください。</p>
+ <div class="cite">@misc{nagashima2026medslmja,
+  title        = {med-slm-ja Before/After: A Temporal QA Dataset of
+                  Japanese Clinical Guidelines},
+  author       = {Nagashima, Daichi},
+  organization = {GENSHI AI},
+  year         = {2026},
+  howpublished = {\url{https://huggingface.co/datasets/genshiai-daichi/med-slm-ja-before-after}}
+}</div>
+ <div class="disc"><b>注意・制限。</b>旧版回答は旧版本文からの<b>抽出生成</b>で、当時の実際の文言とは異なる場合があります。LLM 生成を含むので、臨床判断は必ず一次資料を確認してください。<code>none</code> は学習信号がなく DPO 向きではありません。<code>unrelated</code> は検索の誤ヒットを含むので要確認です。新旧の年が同じ・不明なペアもあります（版メタデータ由来）。</div>
+</div></section>
+
+<footer>
+ <div class="links"><a href="explore.html">データを見る</a><a href="https://huggingface.co/datasets/genshiai-daichi/med-slm-ja-before-after">Hugging Face</a><a href="https://genshi.ai">GENSHI AI</a><a href="#">トップへ戻る</a></div>
+ <div class="byline">MED-SLM-JA PROJECT &nbsp;·&nbsp; BY <a href="https://genshi.ai">GENSHI AI</a></div>
+ <div style="margin-top:10px">License: CC BY 4.0 &nbsp;·&nbsp; 旧版回答は LLM による抽出生成を含みます</div>
+</footer>
+</body></html>
