@@ -165,7 +165,7 @@ footer .byline{letter-spacing:.12em;text-transform:uppercase;font-weight:700;col
 <header class="hero wrap">
  <div class="eyebrow">Japanese Clinical Guidelines · Temporal Before/After</div>
  <h1>医療ガイドラインの<br>新旧比較データセット</h1>
- <p class="tag">日本の医療ガイドライン約200冊について、旧版と新版で回答が変わった箇所を <b>46,705 件</b> 集めました。各ペアに新旧の出典が付いています。</p>
+ <p class="tag">日本の医療ガイドライン約200冊について、旧版と新版で回答が変わった箇所を <b>46,705 件</b> 集めました。<br>各ペアに新旧の出典が付いています。</p>
  <div class="authors">
   <div class="aname">長嶋 大地 <span>Daichi Nagashima</span></div>
   <div class="affil"><a href="https://genshi.ai">GENSHI AI</a> 代表取締役 CEO &nbsp;/&nbsp; 東京大学医学部附属病院 循環器内科</div>
@@ -192,7 +192,7 @@ footer .byline{letter-spacing:.12em;text-transform:uppercase;font-weight:700;col
 
 <section id="premise"><div class="wrap col">
  <div class="sec-head"><div class="eyebrow">Premise</div><h2>ガイドラインは数年ごとに改訂されます</h2>
-  <p>改訂のたびに、診断基準や推奨薬が変わります。古い版のままだと、今の標準と違う回答になります。</p></div>
+  <p>改訂のたびに、診断基準や推奨薬が変わります。<br>古い版のままだと、今の標準と違う回答になります。</p></div>
  <div class="callout">
   <div class="cstat"><div class="v">387</div><div class="l">改訂を重ねる系列</div><div class="s">タイトル＋発行組織で判定</div></div>
   <div class="cstat"><div class="v">664</div><div class="l">存在する旧版の数</div><div class="s">収集した全体での実数</div></div>
@@ -225,7 +225,7 @@ footer .byline{letter-spacing:.12em;text-transform:uppercase;font-weight:700;col
 
 <section id="types" class="alt"><div class="wrap col">
  <div class="sec-head"><div class="eyebrow">Taxonomy</div><h2>5つの type</h2>
-  <p>全ペアを、新旧の差の性質で5つに分けています。捨てるのは判定できなかったものだけです。</p></div>
+  <p>全ペアを、新旧の差の性質で5つに分けています。<br>捨てるのは判定できなかったものだけです。</p></div>
  <table class="tbl">
   <thead><tr><th>type</th><th>意味</th><th>件数</th></tr></thead>
   <tbody>
@@ -286,7 +286,7 @@ footer .byline{letter-spacing:.12em;text-transform:uppercase;font-weight:700;col
 
 <section id="how"><div class="wrap col">
  <div class="sec-head"><div class="eyebrow">Method</div><h2>作り方</h2>
-  <p>新版の Q&amp;A を起点に、同じガイドラインの旧版本文と照合します。4ステップです。</p></div>
+  <p>新版の Q&amp;A を起点に、同じガイドラインの旧版本文と照合します。<br>4ステップです。</p></div>
  <div class="pipe">
   <div class="step"><div class="n">1</div><b>旧版を検索</b><span>質問を <code>ruri-v3-310m</code> でベクトル化し、同じガイドラインの旧版 L2 チャンクから上位5件を取り出します。</span></div>
   <div class="step"><div class="n">2</div><b>旧版回答を生成</b><span>取り出した旧版本文だけを使い、<code>gemma-4-31b</code> で回答します。該当がなければ飛ばします。</span></div>
